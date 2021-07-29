@@ -1,0 +1,8 @@
+  - name: kn_agriculture_data_atlas
+  - name: kn_water_data_atlas
+    columns:
+      - name: '"wat_src Name"'
+        tests:
+          - accepted_values:
+              values: ['Fresh surface and groundwater', 'Fresh surface water', 'Fresh groundwater']
+              severity: warn

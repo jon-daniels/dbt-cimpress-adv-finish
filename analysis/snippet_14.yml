@@ -1,0 +1,7 @@
+    description: This snapshot tracks provides status history
+    columns:
+      - name: country
+        tags:
+          - snap
+        tests:
+          - not_null

@@ -1,0 +1,5 @@
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "LEN(alpha2_code) = 4"
+          condition: "SIGN(un_code) LIKE ANY (1,0)"
+          severity: warn

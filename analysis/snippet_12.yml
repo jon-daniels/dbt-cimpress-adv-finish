@@ -1,0 +1,19 @@
+models:
+  coastline_project:
+    dbt_du_transform:
+      kn_agriculture_data_atlas:
+        materialized: table
+      kn_water_data_atlas:
+        materialized: table
+      rf_coastline_distances:
+        materialized: table
+      rf_country_codes:
+        materialized: table
+      rf_square_kilometers:
+        materialized: table
+      rf_coastline_distances_cleaned:
+        materialized: table
+      rf_country_codes_cleaned:
+        materialized: table
+      rf_square_kilometers_cleaned:
+        materialized: table
