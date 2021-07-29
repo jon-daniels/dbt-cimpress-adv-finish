@@ -1,0 +1,11 @@
+version: 2
+
+snapshots:
+  - name: country_codes_snapshot
+    description: This snapshot tracks provides status history
+    columns:
+      - name: country
+        tags:
+          - snap
+        tests:
+          - not_null

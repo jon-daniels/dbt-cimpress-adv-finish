@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: rf_coastline_distances
+    description: Coastline distances per country.
+    columns:
+      - name: country
+        description: This is an initcap name of the country.
+        tags: 
+          - lookup
+        tests:
+        description: This test covers nullability and >
+          uniqueness for the primary key country.
+          - unique
+          - not_null
+  - name: rf_country_codes_cleaned
+  - name: rf_country_codes
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "LEN(alpha2_code) = 4"
+          condition: "SIGN(un_code) LIKE ANY (1,0)"
+          severity: warn
+    columns:
+      - name: country
+        tags: 
+          - lookup
+        tests:
+          - unique
+          - not_null
+  - name: rf_square_kilometers
+    columns:
+      - name: country
+        tags: 
+          - lookup
+        tests:
+          - unique
+          - not_null
+  - name: kn_agriculture_data_atlas
+    description: '{{ doc("agriculture_atlas") }}'
+  - name: kn_water_data_atlas
+    columns:
+      - name: '"wat_src Name"'
+        tests:
+          - accepted_values:
+              values: ['Fresh surface and groundwater', 'Fresh surface water', 'Fresh groundwater']
+              severity: warn
