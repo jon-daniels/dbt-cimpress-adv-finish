@@ -14,7 +14,9 @@ models:
           - unique
           - not_null
   - name: rf_country_codes_cleaned
+    description: This is the version without double ticks!
   - name: rf_country_codes
+    description: These are initcap names of country codes.
     tests:
       - dbt_utils.expression_is_true:
           expression: "LEN(alpha2_code) = 4"
