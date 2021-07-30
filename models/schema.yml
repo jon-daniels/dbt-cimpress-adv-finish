@@ -22,6 +22,7 @@ models:
           severity: warn
     columns:
       - name: country
+        description: This is the initcap name of the country.
         tags: 
           - lookup
         tests:
@@ -30,6 +31,7 @@ models:
   - name: rf_square_kilometers
     columns:
       - name: country
+        description: This is the initcap name of the country.
         tags: 
           - lookup
         tests:
