@@ -31,6 +31,7 @@ models:
           - unique
           - not_null
   - name: rf_square_kilometers
+    desription: This is the square kilometers per country.
     columns:
       - name: country
         description: This is the initcap name of the country.
@@ -42,6 +43,7 @@ models:
   - name: kn_agriculture_data_atlas
     description: '{{ doc("agriculture_atlas") }}'
   - name: kn_water_data_atlas
+    description: This is the water atlas from Knoema.
     columns:
       - name: '"wat_src Name"'
         tests:
