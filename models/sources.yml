@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: agriculture_atlas
-    database: raw_demo # archetype_sessions_source
+    database: archetype_sessions_source
     loader: snowflake
     schema: stg
     tables:
